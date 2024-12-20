@@ -1,7 +1,25 @@
 {
-  "settingsInheritedFrom": "amaybaum-prod/whitesource-config@main"
+  "settingsInheritedFrom": "DimaMend/whitesource-config@main",
+  "scanSettings": {
+    "enableReachability": true,
+    "exploitability": true
+  },
+  "checkRunSettings": {
+    "strictMode": "warning"
+  },
+  "scanSettingsSAST": {
+    "enableScan": "true",
+    "scanPullRequests": true
+  },
+  "remediateSettings": {
+    "workflowRules": {
+      "enabled": true
+    },
+    "enableRenovate": true,
+    "extends": [
+      "config:recommended",
+      "mergeConfidence:all-badges",
+      "github>mend-toolkit/mend-examples//Repo-Integration/Renovate/smart-merge"
+    ]
+  }
 }
-
-
-
-
